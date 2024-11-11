@@ -1,0 +1,879 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 90vh;
+    /* background-image: url(pexels-timo-1192514-6581678.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    background-color: black;
+}
+body::-webkit-scrollbar{
+    width: 2px;
+}
+body::-webkit-scrollbar-track {
+    background: rgb(1, 1, 1);        
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 251, 255);   
+    border-radius: 20px;      
+  }
+
+nav {
+    background-color: rgb(0, 0, 0);
+    backdrop-filter: blur(100px);
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    width: 60%;
+    /* max-width: 60%; */
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: rgb(0 255 116 / 79%) 0px 7px 200px 15px;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li {
+    color: white;
+    font-weight: 600;
+    list-style: none;
+    /* border: 1px solid magenta ; */
+    border-radius: 25px;
+    margin: 10px;
+    padding: 8px 23px;
+    font-size: 12px;
+    transition: transform 1s ease;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+nav ul li::after {
+    position: absolute;
+    transform: scale(0);
+    content: '';
+    height: 20px;
+    width: 20px;
+    top: 25%;
+    left: 40%;
+    z-index: -1;
+    transition: transform 1s ease, background-image 10s ease;
+    background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
+    border-radius: 25px;
+
+}
+
+nav ul li:hover::after {
+    transform: scale(600%);
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.logo {
+    color: whitesmoke;
+    margin-left: 30px;
+    font-size: 19px;
+    letter-spacing: 2px;
+}
+.git-button{
+    /* border: 1px solid white; */
+    margin-right: 3rem;
+}
+.git-button>button {
+    border: 0;
+    font-size: 14px;
+    letter-spacing: 2px;
+    border-radius: 25px;
+    position: relative;
+    background-color: black;
+    color: white;
+    text-align: center;
+   
+    height: 35px;
+    width: 110px;
+    /* transition: 1s ease; */
+    cursor: pointer;
+}
+
+.git-button>button::after {
+    content: '';
+    top: -2px;
+    bottom: -2px;
+    right: -2px;
+    left: -2px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 26px;
+    background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+    box-shadow: #cc208e 0px 1px 20px 0px;
+}
+
+.git-button>button:hover {
+    z-index: 1;
+}
+
+.about {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+.about::after{
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 1px;
+    top:50%;
+    bottom: 0px;
+    left: 48%;
+    right: 0px;
+    /* z-index: -1; */
+    /* border: 1px solid white; */
+    box-shadow: rgb(2 206 255 / 29%) 40px 40px 1000px 180px;
+}
+
+.about h1 {
+    font-family: "Manrope", sans-serif;
+    color: bisque;
+    font-optical-sizing: auto;
+    font-size: 60px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.about h2 {
+    font-family: "Manrope", sans-serif;
+    color: bisque;
+    font-optical-sizing: auto;
+    font-size: 40px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.I-am-a {
+    position: relative;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    color: cyan;
+    font-style: normal;
+}
+
+.I-am-a::after {
+    content: '';
+    top: 5px;
+    height: 42px;
+    width: 4px;
+    background-color: palevioletred;
+    position: absolute;
+}
+
+.prosIn {
+    margin-top: 20px;
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+    /* height: 40px; */
+}
+
+.pro-fd button {
+    margin-right: 40px;
+    height: 40px;
+    width: 180px;
+    border-radius: 25px;
+    position: relative;
+    border: none;
+    background-color: black;
+    color: bisque;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: background-image 10s ease;
+    transition: font-size 1s ease;
+    cursor: pointer;
+}
+
+.pro-fd button::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    border-radius: 26px;
+    left: -2px;
+    right: -2px;
+    z-index: -1;
+    box-shadow: #92fe9d 0px 0px 11px 0px;
+    background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+}
+
+.pro-fd button:hover {
+    z-index: 1;
+    color: black;
+    font-weight: bold;
+    /* font-size: 15px; */
+
+}
+
+.pro-we button {
+    height: 40px;
+    width: 180px;
+    border-radius: 25px;
+    position: relative;
+    border: none;
+    background-color: black;
+    color: bisque;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.pro-we button::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    border-radius: 26px;
+    left: -2px;
+    right: -2px;
+    box-shadow: #92fe9d 0px 0px 11px 0px;
+    background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+    z-index: -1;
+}
+
+.pro-we button:hover {
+    z-index: 1;
+    color: black;
+    font-weight: bold;
+    /* font-size: 15px; */
+}
+
+.dcv {
+    margin-top: 30px;
+}
+
+.dcv button {
+    top: 0px;
+    position: relative;
+    height: 40px;
+    padding: 10px 30px;
+    text-align: center;
+    border: none;
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: top 0.3s ease;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+
+.dcv button:hover {
+    top: -2px;
+}
+.Skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 250px;
+    overflow-x: hidden;
+    /* position: relative; */
+}
+.skill-container-1::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    top: 1%;
+    right: 1%;
+    z-index: 2;
+
+    box-shadow: rgba(0, 0, 0, 0.715) 40px 22px 200px 250px;
+}
+.skill-container-1::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    top: 1%;
+    left: 1%;
+    z-index: 1;
+    /* background-color: rgb(206, 27, 27); */
+    box-shadow: rgba(0, 0, 0, 0.715) 40px 22px 200px 250px;
+}
+.Skills h1{
+    font-family: "Faculty Glyphic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: white;
+}
+.skill-container-1{
+    position: relative;
+    width: 100%;
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.skill-container-1:nth-child(even){
+    padding-left: 120px;
+}
+
+.skill-card{
+    padding: 50px;
+    height: 100px;
+    width: 100px;
+    border: 1px solid rgb(55, 55, 55);
+    border-radius: 10px;
+    background-color: rgb(10, 10, 10);
+    margin: 10px;
+    transition: box-shadow 0.5s ease;
+}
+.html:hover{
+    box-shadow: rgba(0, 72, 255, 0.712) 0px 0px 30px 4px;
+}
+.css:hover{
+    box-shadow: rgba(255, 225, 0, 0.712) 0px 0px 30px 4px;
+}
+.js:hover{
+    box-shadow: rgba(137, 2, 255, 0.712) 0px 0px 30px 4px;
+}
+.science:hover{
+    box-shadow: rgba(255, 30, 0, 0.712) 0px 0px 30px 4px;
+}
+.git:hover{
+    box-shadow: rgba(21, 255, 0, 0.712) 0px 0px 30px 4px;
+}
+.mongo:hover{
+    box-shadow: rgba(238, 0, 255, 0.712) 0px 0px 30px 4px;
+}
+.express:hover{
+    box-shadow: rgba(255, 0, 174, 0.712) 0px 0px 30px 4px;
+}
+.github:hover{
+    box-shadow: rgba(0, 136, 255, 0.712) 0px 0px 30px 4px;
+}
+.tailwind:hover{
+    box-shadow: rgba(30, 255, 0, 0.712) 0px 0px 30px 4px;
+}
+.html img{
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transform: translateY(-50px);
+    transform: translateX(-45%); */
+    top: 22%;
+    left: 20%;
+}
+.html{
+    cursor: pointer;
+    position: relative;
+}
+.projects{
+    margin-top: 130px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.projects h1{
+    
+    font-family: "Faculty Glyphic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 20px;
+}
+.project-container{
+    /* border: 1px solid white; */
+    display: flex;
+    margin-top: 4%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.project-card{
+    /* border: 1px solid rgb(255, 255, 255); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 45%;
+    position: relative;
+    /* overflow: hidden; */
+}
+.project-card video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.project-description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0px 30px;
+    height: 100%;
+    width: 55%;
+}
+.project-description h1{
+    color: white;
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.project-description p{
+    color: white;
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-size: 18px;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.project-description button{
+    border-radius: 25px;
+    margin-top: 20px;
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: relative;
+
+}
+.Bakery::after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    z-index: -1;
+    border-radius: 26px;
+    background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+}
+.project-description button:hover{
+    z-index: 1;
+    color: black;
+    font-weight: bold;
+}
+.Bakery::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: rgba(3, 237, 198, 0.56) 55px -20px 1000px 90px;
+}
+.CloudCue{
+    background-color: #000000;
+    color: white;
+}
+.CloudCue::after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    z-index: -1;
+    border-radius: 26px;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+
+}
+.CloudCue::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: #e1c10d9a 55px -20px 1000px 90px;
+}
+.TextUtiles{
+    background-color: #000000;
+    color: white;
+}
+.TextUtiles::after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    z-index: -1;
+    border-radius: 26px;
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+}
+.TextUtiles::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: #cf6cc8ac 55px -20px 1000px 90px;
+}
+.Teeva{
+    background-color: #000000;
+    color: white;
+}
+.Teeva::after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    z-index: -1;
+    border-radius: 26px;
+    background-image: linear-gradient(to top, #0fd850 0%, #f9f047 100%);
+}
+.Teeva::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: #0fd84fb0 55px -20px 1000px 90px;
+}
+.Contact{
+    margin-top: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Contact h1{
+    font-family: "Faculty Glyphic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 40px;
+    color: white;
+}
+.burger{
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    /* right: 10%; */
+    top:15px;
+}
+.line{
+    height: 1px;
+    margin: 5px;
+    width: 22px;
+    background-color: white;
+}
+
+@media screen and (max-width: 1350px) {
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 95%;
+        max-width: 95%;
+
+    }
+    .project-container{
+        flex-direction: column;
+    }
+}
+
+
+
+/* For tablets (portrait orientation) */
+@media (max-width: 768px) {
+    .burger{
+        top: 14px;
+        left: 5%;
+    }
+    .logo{
+        position: absolute;
+        font-size: 20px;
+        top: 14px;
+        text-align: center;
+        left: 36%;
+    }
+    nav ul{
+        display: none;
+    }
+    .git-button{
+        position: absolute;
+        top: 9px;
+        right: -5%;
+    }
+    ul.nav-active{
+        position: absolute;
+        display: none;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        min-width: 95%;
+        max-width: 95%;
+        margin: auto;
+        margin-top: 10px;
+        padding-top: 35px;
+        padding-bottom: 15px;
+        position: relative;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .burger{
+        display: block;
+    }
+    .skill-container-1::after{
+        
+    box-shadow: rgba(0, 0, 0, 0.715) 0px 20px 100px 150px;
+    }
+    .skill-container-1::before{
+    box-shadow: rgba(0, 0, 0, 0.715) 0px 20px 100px 150px;
+        
+    }
+    
+    nav ul li {
+        
+        padding: 5px 15px;
+    }
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* width: 90%; */
+        /* margin: auto; */
+    }
+    .about{
+        width: 100%;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    /* nav{
+        display:none;
+    } */
+    
+    .about h1 {
+        font-size: 40px;
+    }
+    
+    .about h2 {
+        font-size: 28px;
+    }
+
+    .skill-container-1 {
+        align-items: center;
+    }
+
+    .skill-card {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .skill-card img{
+        height: 60px;
+        width: 60px;
+    }
+    .project-card{
+        max-width: 100%;
+        padding: 0px;
+    }
+    .project-description{
+        width: 90%;
+        padding: 0px;
+    }
+    .project-container{
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 20px;
+    }
+}
+
+/* For smartphones */
+@media (max-width: 480px) {
+    .skill-container-1::after{
+        
+        box-shadow: rgba(0, 0, 0, 0.715) 0px 20px 100px 70px;
+        }
+        .skill-container-1::before{
+        box-shadow: rgba(0, 0, 0, 0.715) 0px 20px 100px 70px;
+            
+        }
+    nav {
+        width: 100%;
+        /* margin:auto; */
+        padding-top: 25px;
+        padding-bottom: 25px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        /* padding: 10px; */
+    }
+    .burger{
+        top: 14px;
+        left: 8%;
+    }
+    ul.nav-active{
+        position: absolute;
+        display: none;
+    }
+    .git-button{
+        /* border: 1px solid white; */
+        top: -15px;
+        position: absolute;
+        right: -9%;
+        margin-top: 30px;
+    }
+    .git-button button{
+        margin-left: 0px;
+        height: 25px;
+        width: 85px;
+        font-size: 10px;
+        letter-spacing: 2px;
+
+        /* padding-bottom: 17px; */
+    }
+    
+    .logo p{
+        font-size: 30px;
+        position: relative;
+        top: -5px;
+        right: 34%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    .logo {
+        font-size: 16px;
+    }
+
+    .about h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    .Teeva::before{
+        box-shadow: #0fd84fb0 55px -20px 1000px 70px;
+    }
+    .Bakery::before{
+        box-shadow: rgba(3, 237, 198, 0.56) 55px -20px 1000px 70px;
+    }
+    .CloudCue::before{
+        box-shadow: #e1c10d9a 55px -20px 1000px 70px;
+    }
+    .TextUtiles::before{
+        box-shadow: #cf6cc8ac 55px -20px 1000px 70px;
+    }
+
+    .about h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .skill-container-1 {
+        align-items: center;
+    }
+
+    .skill-card {
+        margin: 5px;
+        width: 40px;
+        height: 40px;
+        padding: 30px;
+    }
+    .skill-container-1:nth-child(even){
+        padding-right: 50px;
+    }
+    .skill-container-1:nth-child(odd){
+        padding-left: 100px;
+    }
+    .skill-card img{
+        height: 35px;
+        width: 35px;
+    }
+}
+
+@media screen and (max-width: 402px) {
+    .git-button{
+        right: -10%;
+    }
+    .git-button button{
+        width: 75px;
+    }
+    .prosIn{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .pro-fd button{
+        margin-right: 0px;
+    
+    }
+    .Teeva::before{
+        box-shadow: #0fd84fb0 55px -20px 1000px 60px;
+    }
+    .Bakery::before{
+        box-shadow: rgba(3, 237, 198, 0.56) 55px -20px 1000px 60px;
+    }
+    .CloudCue::before{
+        box-shadow: #e1c10d9a 55px -20px 1000px 60px;
+    }
+    .TextUtiles::before{
+        box-shadow: #cf6cc8ac 55px -20px 1000px 60px;
+    }
+}
