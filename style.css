@@ -582,20 +582,177 @@ nav ul li a{
     bottom: 0;
     box-shadow: #0fd84fb0 55px -20px 1000px 90px;
 }
-.Contact{
-    margin-top: 130px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.Contact h1{
+
+.contact-section {
+    max-width: 45%;
+    margin: 150px auto;
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-out;
+  }
+  
+  .contact-section h2 {
     font-family: "Faculty Glyphic", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 40px;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 40px;
+  color: white;
+    opacity: 0;
+    animation: slideInTop 1s forwards;
+  }
+  
+  .contact-section>p {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    animation: slideInLeft 1s forwards;
+  }
+  
+  /* Contact info section with individual animations */
+  .contact-info {
+    position: relative;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+  }
+  .contact-info::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    top: 50%;
+    left: 37%;
+    right: 0;
+    bottom: 0;
+    box-shadow: #d57eeb 55px -20px 1000px 180px;
+  }
+
+  
+  .contact-item {
+
+    cursor: pointer;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  .email{
+    font-family: "Raleway", serif;
+    position: relative;
+  }
+  .email::after{
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 8px;
+    z-index: -1;
+    background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+  }
+  .phone{
+font-family: "Raleway", sans-serif;
+    position: relative;
+  }
+  .phone::after{
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 8px;
+    z-index: -1;
+    background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+  }
+  .address{
+    position: relative;
+    font-family: "Raleway", sans-serif;
+  }
+  .address::after{
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 8px;
+    z-index: -1;
+    background-image: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
+  }  
+  .contact-item h3 {
     color: white;
-}
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .contact-item p {
+    color: #ffffff;
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+  
+  .contact-link {
+    color: #d57eeb;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-link:hover {
+    color: #dec2dd;
+  }
+  
+  /* Social media section */
+  .social-media {
+    margin-top: 30px;
+    font-size: 1.2em;
+  }
+  
+  .social-links {
+    margin-top: 10px;
+  }
+  
+  .social-link {
+    margin: 0px 5px;
+    color: #ebeceb;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .social-link:hover {
+    color: #a2a2a2;
+    text-decoration: underline;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes slideInTop {
+    0% { transform: translateY(-30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes slideInLeft {
+    0% { transform: translateX(-30px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+  
+  
 .burger{
     display: none;
     cursor: pointer;
@@ -621,6 +778,9 @@ nav ul li a{
     }
     .project-container{
         flex-direction: column;
+    }
+    .contact-section{
+        max-width: 70%;
     }
 }
 
@@ -733,6 +893,9 @@ nav ul li a{
         flex-direction: column;
         gap: 10px;
         padding-top: 20px;
+    }
+    .contact-section{
+        max-width: 90%;
     }
 }
 
@@ -848,6 +1011,18 @@ nav ul li a{
     }
     .I-am-a::after{
         height: 25px;
+    }
+    .contact-section{
+        max-width: 100%;
+    }
+    .email p{
+        font-size: 11px;
+    }
+    .skill-container-1::before{
+        box-shadow: rgba(0, 0, 0, 0.715) 0px 20px 100px 90px;
+    }
+    .skill-container-1::after{
+        box-shadow: rgba(0, 0, 0, 0.715) 0px 20px 100px 90px;
     }
 }
 
