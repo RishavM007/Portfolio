@@ -897,6 +897,10 @@ font-family: "Raleway", sans-serif;
     .contact-section{
         max-width: 90%;
     }
+    .contact-info::before{
+        left: 32%;
+        box-shadow: #d57eeb 55px -20px 1000px 100px;
+    }
 }
 
 /* For smartphones */
@@ -969,16 +973,16 @@ font-family: "Raleway", sans-serif;
         text-align: center;
     }
     .Teeva::before{
-        box-shadow: #0fd84fb0 55px -100px 1000px 40px;
+        box-shadow: #0fd84fb0 55px 0px 1000px 50px;
     }
     .Bakery::before{
-        box-shadow: rgba(3, 237, 198, 0.56) 55px -100px 1000px 40px;
+        box-shadow: rgba(3, 237, 198, 0.56) 55px 0px 1000px 50px;
     }
     .CloudCue::before{
-        box-shadow: #e1c10d9a 55px -100px 1000px 40px;
+        box-shadow: #e1c10d9a 55px 0px 1000px 50px;
     }
     .TextUtiles::before{
-        box-shadow: #cf6cc8ac 55px -100px 1000px 40px;
+        box-shadow: #cf6cc8ac 55px 0px 1000px 50px;
     }
 
     .about h2 {
@@ -1024,6 +1028,10 @@ font-family: "Raleway", sans-serif;
     .skill-container-1::after{
         box-shadow: rgba(0, 0, 0, 0.715) 0px 20px 100px 90px;
     }
+    .contact-info::before{
+        left: 32%;
+        box-shadow: #d57eeb 55px -20px 1000px 100px;
+    }
 }
 
 @media screen and (max-width: 402px) {
@@ -1047,16 +1055,16 @@ font-family: "Raleway", sans-serif;
     
     }
     .Teeva::before{
-        box-shadow: #0fd84fb0 55px -100px 1000px 40px;
+        box-shadow: #0fd84fb0 55px 0px 1000px 50px;
     }
     .Bakery::before{
-        box-shadow: rgba(3, 237, 198, 0.56) 55px -100px 1000px 40px;
+        box-shadow: rgba(3, 237, 198, 0.56) 55px 0px 1000px 50px;
     }
     .CloudCue::before{
-        box-shadow: #e1c10d9a 55px -100px 1000px 40px;
+        box-shadow: #e1c10d9a 55px 0px 1000px 50px;
     }
     .TextUtiles::before{
-        box-shadow: #cf6cc8ac 55px -100px 1000px 40px;
+        box-shadow: #cf6cc8ac 55px 0px 1000px 50px;
     }
     .project-card{
         height: 310px;
@@ -1066,5 +1074,9 @@ font-family: "Raleway", sans-serif;
     }
     .I-am-a::after{
         height: 22px;
+    }
+    .contact-info::before{
+        left: 25%;
+        box-shadow: #d57eeb 55px -20px 1000px 100px;
     }
 }
