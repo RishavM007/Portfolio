@@ -846,6 +846,9 @@ nav ul li a{
     .project-container{
         margin-bottom: 50px;
     }
+    .I-am-a::after{
+        height: 25px;
+    }
 }
 
 @media screen and (max-width: 402px) {
@@ -885,5 +888,8 @@ nav ul li a{
     }
     .about::after{
         box-shadow: rgb(2 206 255 / 29%) 10px 40px 1000px 110px;
+    }
+    .I-am-a::after{
+        height: 22px;
     }
 }
