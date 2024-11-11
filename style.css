@@ -843,10 +843,14 @@ nav ul li a{
         height: 35px;
         width: 35px;
     }
+    .project-container{
+        margin-bottom: 50px;
+    }
 }
 
 @media screen and (max-width: 402px) {
     .git-button{
+        top: -17px;
         right: -10%;
     }
     .git-button button{
@@ -875,5 +879,11 @@ nav ul li a{
     }
     .TextUtiles::before{
         box-shadow: #cf6cc8ac 55px -20px 1000px 60px;
+    }
+    .project-card{
+        height: 310px;
+    }
+    .about::after{
+        box-shadow: rgb(2 206 255 / 29%) 10px 40px 1000px 90px;
     }
 }
