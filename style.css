@@ -806,16 +806,16 @@ nav ul li a{
         text-align: center;
     }
     .Teeva::before{
-        box-shadow: #0fd84fb0 55px -20px 1000px 70px;
+        box-shadow: #0fd84fb0 55px -100px 1000px 40px;
     }
     .Bakery::before{
-        box-shadow: rgba(3, 237, 198, 0.56) 55px -20px 1000px 70px;
+        box-shadow: rgba(3, 237, 198, 0.56) 55px -100px 1000px 40px;
     }
     .CloudCue::before{
-        box-shadow: #e1c10d9a 55px -20px 1000px 70px;
+        box-shadow: #e1c10d9a 55px -100px 1000px 40px;
     }
     .TextUtiles::before{
-        box-shadow: #cf6cc8ac 55px -20px 1000px 70px;
+        box-shadow: #cf6cc8ac 55px -100px 1000px 40px;
     }
 
     .about h2 {
@@ -869,21 +869,21 @@ nav ul li a{
     
     }
     .Teeva::before{
-        box-shadow: #0fd84fb0 55px -20px 1000px 60px;
+        box-shadow: #0fd84fb0 55px -100px 1000px 40px;
     }
     .Bakery::before{
-        box-shadow: rgba(3, 237, 198, 0.56) 55px -20px 1000px 60px;
+        box-shadow: rgba(3, 237, 198, 0.56) 55px -100px 1000px 40px;
     }
     .CloudCue::before{
-        box-shadow: #e1c10d9a 55px -20px 1000px 60px;
+        box-shadow: #e1c10d9a 55px -100px 1000px 40px;
     }
     .TextUtiles::before{
-        box-shadow: #cf6cc8ac 55px -20px 1000px 60px;
+        box-shadow: #cf6cc8ac 55px -100px 1000px 40px;
     }
     .project-card{
         height: 310px;
     }
     .about::after{
-        box-shadow: rgb(2 206 255 / 29%) 10px 40px 1000px 90px;
+        box-shadow: rgb(2 206 255 / 29%) 10px 40px 1000px 110px;
     }
 }
